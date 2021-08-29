@@ -13,10 +13,10 @@ if [ $(id -u) != "0" ]; then
 fi
 
 REQUEST_SERVER="https://raw.github.com/Lozy/danted/master"
-SCRIPT_SERVER="https://raw.githubusercontent.com/Lozy/danted/master/script/sockd"
+SCRIPT_SERVER="https://raw.githubusercontent.com/Lozy/danted/master/script"
 SYSTEM_RECOGNIZE=""
 
-[ "$1" == "--no-github" ] && REQUEST_SERVER=${SCRIPT_SERVER}
+REQUEST_SERVER=${SCRIPT_SERVER}
 
 if [ -s "/etc/os-release" ];then
     os_name=$(sed -n 's/PRETTY_NAME="\(.*\)"/\1/p' /etc/os-release)
